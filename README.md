@@ -54,9 +54,9 @@ This project explores the application of **Natural Language Processing (NLP)** t
 | MuRIL + Adapter   | 0.840          | 2.3168     |
 
 ### **Observations:**
-![Baseline MuRIL: Perplexity vs Epochs](results/loss_curve.png)  
-![Baseline MuRIL: Validation Loss vs Epochs](results/perplexity_graph.png) 
-![Baseline MuRIL vs MuRIL with Bottleneck Adapter](results/perplexity_graph.png)  
+![Baseline MuRIL: Perplexity vs Epochs](plots/perp_epoch.png)  
+![Baseline MuRIL: Validation Loss vs Epochs](plots/val_epoch.png) 
+![Baseline MuRIL vs MuRIL with Bottleneck Adapter](plots/compare.png)  
 
 ---
 
