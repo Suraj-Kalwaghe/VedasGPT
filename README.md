@@ -67,7 +67,7 @@ pip install -r requirements.txt
 ```
 
 ### **2️⃣ Load the Jupyter Notebook**
-Run `ENPM703_FinalProj.ipynb` to see training and evaluation steps.
+Run `VedasGPT.ipynb` to see training and evaluation steps.
 
 ### **3️⃣ Inference Example**
 ```python
