@@ -1,47 +1,42 @@
 # **AI-Based Interpretation of Vedic Texts using MuRIL**
-Fine-tuning the MuRIL model on Sanskrit texts from the Atharva Veda to provide personalized life guidance based on Vedic wisdom.
 
-![MuRIL NLP](https://huggingface.co/front/assets/huggingface_logo-noborder.svg)
+This repository contains files for VedasGPT. VedasGPT is a Pre-trained model based on Sanskrit langauage (trained on Atharva Veda) which gives information from Atharva Veda based on text input. The input will be questions on topics based on Atharva Veda. 
+The goal of this project was to make a model that will be capable of giving meaningful advices on handling life on a more physical level, how to deal with discomfort and desires, and provide rules for a steady state daily life activites. (Basically everything that Atharva Veda consits)
+
+As of Feb 5th 2025, the work is still under progress. 
+The repository (as of Feb 5th) contains comparison of different tokenizers and which best for our application. 
+
 
 ---
 
-## **📌 Project Overview**
+## **Project Overview**
 This project explores the application of **Natural Language Processing (NLP)** to interpret ancient Hindu Vedic scriptures, specifically the **Atharva Veda**. By leveraging the **MuRIL (Multilingual Representations for Indian Languages) model**, we fine-tune it on Sanskrit text to generate **personalized life guidance based on Vedic principles**.
 
 ### **Key Features:**
-- ✅ **Fine-tuning MuRIL** on Sanskrit text from the **Atharva Veda (KANDA-1)** dataset.
-- ✅ **Comparing tokenization strategies** between **MuRIL, BERT, SanBERT, and ByT5**.
-- ✅ **Perplexity optimization**, reducing it from **1.14 to 1.02** for enhanced text understanding.
-- ✅ **Experimenting with adapter layers** to improve computational efficiency while maintaining accuracy.
-- ✅ **Developing a robust NLP pipeline** for Sanskrit text processing, including **tokenization, normalization, and dynamic masking**.
+-  **Fine-tuning MuRIL** on Sanskrit text from the **Atharva Veda (KANDA-1)** dataset.
+-  **Comparing tokenization strategies** between **MuRIL, BERT, SanBERT, and ByT5**.
+-  **Perplexity optimization**, reducing it from **1.14 to 1.02** for enhanced text understanding.
+-  **Experimenting with adapter layers** to improve computational efficiency while maintaining accuracy.
+-  **Developing a robust NLP pipeline** for Sanskrit text processing, including **tokenization, normalization, and dynamic masking**.
+
 
 ---
 
-## **🛠️ Tech Stack**
-- **Python**
-- **PyTorch** & **Hugging Face Transformers**
-- **MuRIL, BERT, SanBERT, ByT5**
-- **NLP Tokenization & Adapter Layers**
-- **Atharva Veda Sanskrit Text Processing**
-- **Jupyter Notebook**
-
----
-
-## **📂 Repository Structure**
+## **Repository Structure**
 ```
 📦 AI-for-Vedic-Scriptures
-├── 📜 ENPM703_FinalProj.ipynb   # Jupyter Notebook with training & evaluation
-├── 📄 ENPM_703_Final_Report.pdf  # Full project report
-├── 📁 data/                      # Sanskrit dataset (if public)
-├── 📁 models/                    # Saved fine-tuned MuRIL models
-├── 📁 results/                   # Visualizations & performance graphs
-├── 📜 requirements.txt           # Dependencies
-└── 📜 README.md                  # This file
+├──  ENPM703_FinalProj.ipynb   # Jupyter Notebook with training & evaluation
+├──  ENPM_703_Final_Report.pdf  # Full project report
+├──  data/                      # Sanskrit dataset (if public)
+├──  models/                    # Saved fine-tuned MuRIL models
+├──  results/                   # Visualizations & performance graphs
+├──  requirements.txt           # Dependencies
+└──  README.md                  # This file
 ```
 
 ---
 
-## **📊 Results**
+## **Results**
 ### **Training Performance:**
 - **Initial perplexity:** `1.14`
 - **Final perplexity:** `1.02`
@@ -60,16 +55,16 @@ This project explores the application of **Natural Language Processing (NLP)** t
 
 ---
 
-## **🚀 How to Run**
-### **1️⃣ Install Dependencies**
+## **Steps to run**
+### ** Install Dependencies**
 ```bash
 pip install -r requirements.txt
 ```
 
-### **2️⃣ Load the Jupyter Notebook**
+### ** Load the Jupyter Notebook**
 Run `VedasGPT.ipynb` to see training and evaluation steps.
 
-### **3️⃣ Inference Example**
+### ** Inference Example**
 ```python
 from transformers import AutoModelForMaskedLM, AutoTokenizer
 import torch
@@ -88,7 +83,7 @@ print(predicted_token)
 
 ---
 
-## **📖 Dataset**
+## **Dataset**
 - **KANDA-1**: A dataset derived from **Atharva Veda**, containing Sanskrit verses.
 - Preprocessing steps:
   - **Tokenization:** Using **MuRIL tokenizer**.
@@ -98,22 +93,18 @@ print(predicted_token)
 
 ---
 
-## **📌 Challenges & Solutions**
-✅ **Dataset Extraction:** Sanskrit PDF OCR tools were outdated, requiring manual dataset creation.  
-✅ **Tokenization Accuracy:** Compared **MuRIL, BERT, SanBERT, and ByT5** to optimize Sanskrit tokenization.  
-✅ **Punctuation Bias:** MuRIL over-predicted punctuation, requiring **custom masking strategies**.  
-✅ **Computational Trade-offs:** Adapter layers improved **efficiency** but introduced **higher initial loss**.
+## **Challenges & Solutions**
+ **Dataset Extraction:** Sanskrit PDF OCR tools were outdated, requiring manual dataset creation.  
+ **Tokenization Accuracy:** Compared **MuRIL, BERT, SanBERT, and ByT5** to optimize Sanskrit tokenization.  
+ **Punctuation Bias:** MuRIL over-predicted punctuation, requiring **custom masking strategies**.  
+ **Computational Trade-offs:** Adapter layers improved **efficiency** but introduced **higher initial loss**.
 
 ---
 
-## **🛠️ Future Work**
-📌 **Expanding to Other Vedic Texts** – Extending model training to other **Vedas & Upanishads**.  
-📌 **Multimodal Processing** – Integrating **audio analysis for Vedic mantras**.  
-📌 **Question-Answering System** – Allowing users to **query Sanskrit texts interactively**.  
-📌 **Mobile App Interface** – Bringing **Vedic wisdom to real-world applications**.  
+## **Future Work**
+ **Expanding to Other Vedic Texts** – Extending model training to other **Vedas & Upanishads**.  
+ **Multimodal Processing** – Integrating **audio analysis for Vedic mantras**.  
+ **Question-Answering System** – Allowing users to **query Sanskrit texts interactively**.  
+ **Mobile App Interface** – Bringing **Vedic wisdom to real-world applications**.  
 
 
----
-
-## **📜 License**
-This project is licensed under the **MIT License** – feel free to use and expand upon it!
