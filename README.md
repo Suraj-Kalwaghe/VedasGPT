@@ -56,15 +56,15 @@ This project explores the application of **Natural Language Processing (NLP)** t
 ---
 
 ## **Steps to run**
-### ** Install Dependencies**
+### **Install Dependencies**
 ```bash
 pip install -r requirements.txt
 ```
 
-### ** Load the Jupyter Notebook**
+### **Load the Jupyter Notebook**
 Run `VedasGPT.ipynb` to see training and evaluation steps.
 
-### ** Inference Example**
+### **Inference Example**
 ```python
 from transformers import AutoModelForMaskedLM, AutoTokenizer
 import torch
